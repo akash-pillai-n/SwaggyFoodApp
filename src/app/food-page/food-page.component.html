@@ -1,0 +1,36 @@
+<div class="container">
+  <img
+    [src]="food.imageUrl"
+    [alt]="food.name"
+    class="img-fluid img-thumbnail"
+  />
+  <div class="details">
+    <span class="name my-3">
+      {{ food.name }}
+    </span>
+    <span class="favorite mx-3 {{ food.favorite ? '' : 'not' }}">❤</span>
+    <star-rating
+      [value]="food.stars"
+      [totalstars]="5"
+      checkedcolor="gold"
+      uncheckedcolor="black"
+      size="24px"
+      [readonly]="true"
+    ></star-rating>
+    <div class="origins my-2">
+      <span *ngFor="let origin of food.origins">
+        {{ origin }}
+      </span>
+    </div>
+    <div class="tags my-2">
+      <app-tags [foodPageTags]="food.tags"></app-tags>
+    </div>
+    <div class="cookTime my-2">
+        Estimated cooking time : {{ food.cookTime }} mins
+        <span>🕒</span>
+    </div>
+    <div class="price my-2">Price : ₹{{ food.price }}</div>
+
+    <button class="btn btn-info my-3" (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>

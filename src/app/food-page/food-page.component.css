@@ -1,0 +1,30 @@
+img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  margin: 2rem;
+  margin-right: 6rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+.container > * {
+  min-width: 25rem;
+  max-width: 40rem;
+}
+
+.details .favorite{
+    color: red;
+    font-size: 2rem;
+}
+
+.details .favorite.not{
+    color: black;
+    font-size: 1.9rem;
+}

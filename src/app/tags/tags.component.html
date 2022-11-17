@@ -1,0 +1,27 @@
+<div
+  *ngIf="tags"
+  class="container my-2"
+  [style.justifyContent]="justifyContent"
+>
+  <a
+    *ngFor="let tag of tags"
+    routerLink="/tag/{{ tag.name }}"
+    class="badge text-bg-info mx-4"
+  >
+    {{ tag.name }}({{ tag.count }})
+  </a>
+</div>
+
+<div
+  *ngIf="foodPageTags"
+  class="container my-2"
+  [style.justifyContent]="justifyContent"
+>
+  <a
+    *ngFor="let tagname of foodPageTags"
+    routerLink="/tag/{{ tagname }}"
+    class="badge text-bg-info mx-4"
+  >
+    {{ tagname }}
+  </a>
+</div>

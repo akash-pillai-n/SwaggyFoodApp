@@ -1,0 +1,61 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0 auto;
+}
+
+ul li a{
+    height: 20rem;
+    width: 40rem;
+    border: 1px solid rgb(112, 105, 4);
+    border-radius: 1rem;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: rgb(112, 105, 4);
+}
+
+li a:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+img {
+    float: left;
+    width:  10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    padding: 2px;
+    margin: 2px;
+}
+
+.spacing{
+    margin-left: 10px;
+}
+
+.origins span{
+    font-size: .8rem;
+    color: darkslategray;
+}
+
+.card-header {
+    padding: auto;
+    margin-top: .5rem;
+}
+.favorite{
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-size: 1.7rem;
+    color: red;
+}
+
+.favorite.not{
+    color: black;
+}

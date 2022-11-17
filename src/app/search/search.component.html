@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="input-group mb-3 mt-4" >
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search SWAGGY Food"
+      [(ngModel)]="searchItem"
+      (change) ="search()"
+    />
+    <button class="btn btn-warning" (click)="search()">Search</button>
+  </div>
+</div>
