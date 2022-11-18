@@ -22,12 +22,14 @@ export class CartService {
   }
 
   changeQuantity(quantity : number , foodId : number){
-    let cartItem = this.cart.items.find(items => items.food.id === foodId );
+    let cartItem = this.cart.items.find(item => item.food.id === foodId );
     if(!cartItem)return;
     cartItem.quantity = quantity;
+    cartItem.food.price = quantity * cartItem.food.price;
   }
 
   getCart():Cart{
     return this.cart;
   }
+  
 }

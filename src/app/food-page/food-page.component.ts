@@ -7,22 +7,25 @@ import { Foods } from '../shared/models/food';
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
-  styleUrls: ['./food-page.component.css']
+  styleUrls: ['./food-page.component.css'],
 })
 export class FoodPageComponent implements OnInit {
-food!: Foods;
+  food!: Foods;
 
-  constructor(private activatedRoute : ActivatedRoute, private foodServices : FoodService , private cartService: CartService , private router:Router) { 
-    activatedRoute.params.subscribe((params)=> {
-      if(params['id'])
-      this.food = foodServices.getfoodById(params['id'])
-    } )
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private foodServices: FoodService,
+    private cartService: CartService,
+    private router: Router
+  ) {
+    activatedRoute.params.subscribe((params) => {
+      if (params['id']) this.food = foodServices.getfoodById(params['id']);
+    });
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  addToCart() {
+    this.cartService.addToCart(this.food);
+    this.router.navigateByUrl('/cart-page');
   }
-addToCart(){
-  this.cartService.addToCart(this.food);
-  this.router.navigateByUrl('/cart-page')
-}
 }

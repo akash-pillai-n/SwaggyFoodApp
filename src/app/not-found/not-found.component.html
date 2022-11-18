@@ -1,0 +1,15 @@
+<!-- <div class="container" *ngIf="visible">
+    {{notFoundMessage}}
+<a routerLink="{{resetLinkRoute}}">{{resetLinktext}}</a>
+</div> -->
+
+<div class="d-flex align-items-center justify-content-center vh-100" *ngIf="visible">
+    <div class="text-center">
+        <h1 class="display-1 fw-bold">404 !</h1>
+        <p class="fs-3"> <span class="text-danger">Opps!  </span>Seems like we can't satisfy your cravings now :(</p>
+        <p class="lead">
+            {{notFoundMessage}}
+          </p>
+        <a routerLink="{{resetLinkRoute}}" class="btn btn-primary">{{resetLinktext}}</a>
+    </div>
+</div>

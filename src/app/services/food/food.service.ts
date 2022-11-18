@@ -49,7 +49,7 @@ export class FoodService {
         origins: ['America'],
         stars: 4.0,
         imageUrl: '/assets/food2.jpg',
-        tags: ['FastFood', 'QuickBites'],
+        tags: ['FastFood', 'QuickBites','Spicy'],
       },
       {
         id: 3,
