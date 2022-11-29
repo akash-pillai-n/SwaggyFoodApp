@@ -1,7 +1,8 @@
 <app-not-found
   [visible]="!cart || cart.items.length <= 0"
   notFoundMessage="Your cart is empty"
-  resetLinktext="Go to HomePage"></app-not-found>
+  resetLinktext="Go to HomePage"
+></app-not-found>
 
 <div *ngIf="cart && cart.items.length > 0" class="container my-3">
   <ul class="my-2 list-group">
